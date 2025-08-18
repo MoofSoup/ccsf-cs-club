@@ -1,8 +1,10 @@
 ---
-layout: ../../layouts/BlogPage.astro
+content_type: 'post'
+status: 'published'
 title: "Field Notes from AWS: What Nobody Teaches You About Production AI"
-date: "2025-08-05"
+date: 2025-08-05
 author: "John Chen, Jacky Choi"
+preview_image: '/assets/alpineMeme.png'
 description: "What we learned at AWS Builder Loft that nobody teaches in class—and why it matters for your next hackathon project."
 tags: ["field-notes", "ai", "production", "career-development", "industry-insights"]
 ---

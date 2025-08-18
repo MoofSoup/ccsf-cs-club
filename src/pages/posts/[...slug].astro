@@ -1,7 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
-import PostPage from '../../layouts/PostPage.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogPage from '../../layouts/BlogPage.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -13,31 +12,13 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props as { post: CollectionEntry<'posts'> };
 const { Content } = await post.render();
-
-// Find all possible project pages that can be used as layouts
-const layouts = import.meta.glob('/src/layouts/**/*.astro');
-
-let LayoutComponent;
-// If the post has a layout field, find the corresponding component
-if (post.data.layout) {
-  const layoutPath = `/src/layouts/${post.data.layout}.astro`;
-  if (layoutPath in layouts) {
-    const layoutModule = await layouts[layoutPath]();
-    if (layoutModule && typeof layoutModule === 'object' && 'default' in layoutModule) {
-      LayoutComponent = layoutModule.default;
-    } else {
-      console.error(`Invalid layout module loaded from path: ${layoutPath}`);
-    }
-  } else {
-    // Handle case where layout is specified but not found
-    console.error(`Layout component not found at path: ${layoutPath}`);
-  }
-}
 ---
-{LayoutComponent ? (
-  <LayoutComponent {...post.data} />
-) : (
-  <PostPage {...post.data}>
+{
+  !post.data.layout ? (
+    <BlogPage frontmatter={post.data}>
+      <Content />
+    </BlogPage>
+  ) : (
     <Content />
-  </PostPage>
-)}
+  )
+}

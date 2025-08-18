@@ -1,13 +1,15 @@
 ---
-layout: ../../layouts/BlogPage.astro
+content_type: 'post'
+status: 'published'
 title: "Exactly As Planned: Field Notes, SCC Hacks"
-date: "12/6/24"
+date: 2024-12-06
 author: "Tea Priel"
+preview_image: '/assets/alpineMeme.png'
 description: "Happy accidents and hairbrained schemes lead to a trophy at SCC Hacks"
 linkedin: "https://www.linkedin.com/in/tea-priel-13827a331/"
 github: "https://github.com/MoofSoup/"
 website: "https://github.com/MoofSoup/"
-
+tags: ['blog', 'hackathon', 'scc-hacks']
 ---
 
 ### Perplexity Did What!?

@@ -1,4 +1,5 @@
 ---
+content_type: 'post'
 status: 'published'
 title: 'Test Post without Layout'
 author: 'Gemini'

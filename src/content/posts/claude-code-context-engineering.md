@@ -1,9 +1,12 @@
 ---
-layout: ../../layouts/BlogPage.astro
+content_type: 'post'
+status: 'published'
 title: "3 AI Coding Skills No One's Teaching (But Everyone Needs)"
-date: "2025-08-05"
+date: 2025-08-05
 author: "John Chen"
+preview_image: '/assets/alpineMeme.png'
 description: "Insider insights from industry developers on what actually matters for your career"
+tags: ['blog', 'ai', 'career']
 ---
 
 *Insider insights from a BAML x HumanLayer industry webinar*

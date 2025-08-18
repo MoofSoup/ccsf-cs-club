@@ -26,15 +26,24 @@ const eventsCollection = defineCollection({
 const postsCollection = defineCollection({
   type: 'content',
   schema: z.object({
+    content_type: z.enum(['post']),
     status: z.enum(['draft', 'published']),
+    
     title: z.string(),
     author: z.string(),
     date: z.date(),
     preview_image: z.string(),
     description: z.string(),
     layout: z.string().optional(),
-    tags: z.array(z.string()).default([]),
-  }),
+    
+    // Social links - keep flat to match BlogPage.astro expectations
+    github: z.string().url().optional(),
+    linkedin: z.string().url().optional(),
+    website: z.string().url().optional(),
+    
+    // Additional fields from existing content
+    tags: z.array(z.string()).optional(),
+  })
 });
 
 export const collections = {

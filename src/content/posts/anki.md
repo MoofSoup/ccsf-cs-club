@@ -1,12 +1,14 @@
 ---
-layout: ../../layouts/BlogPage.astro
+content_type: 'post'
+status: 'published'
 title: "Learn About and Use Spaced Repetition for Your Everyday Learning"
-date: "04/18/25"
+date: 2025-04-18
 author: "Xirong \"Ziky\" Zhang"
+preview_image: '/assets/alpineMeme.png'
 description: "An introduction to spaced repetition and how to use Anki for effective learning"
 github: "https://github.com/NahZ1ky"
 website: "https://github.com/NahZ1ky"
-
+tags: ['blog', 'learning', 'anki']
 ---
 
 ### Spaced Repetition
