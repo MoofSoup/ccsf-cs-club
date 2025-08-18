@@ -1,0 +1,19 @@
+---
+import Card from '../components/Card.astro';
+import Base from '../layouts/Base.astro';
+---
+<Base title="Card Test">
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Card Component Test</h1>
+    
+    <h2 class="text-xl font-semibold mt-8 mb-4">Test Case 1: Post</h2>
+    <div class="max-w-md">
+      <Card content_type="post" filename="test-post" />
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Test Case 2: Event</h2>
+    <div class="max-w-md">
+      <Card content_type="event" filename="ai-user-conference-2024" />
+    </div>
+  </div>
+</Base>

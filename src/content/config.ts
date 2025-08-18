@@ -23,6 +23,21 @@ const eventsCollection = defineCollection({
   }),
 });
 
+const postsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    status: z.enum(['draft', 'published']),
+    title: z.string(),
+    author: z.string(),
+    date: z.date(),
+    preview_image: z.string(),
+    description: z.string(),
+    layout: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
 export const collections = {
   events: eventsCollection,
+  posts: postsCollection,
 };
